@@ -37,17 +37,7 @@ pizza_names = [
     "Greek Pizza",
     "Taco Pizza",
 ]
-pizza_images=[
-    "https://shorturl.at/bgGOV",
-    "https://shorturl.at/ixJR9",
-    "https://shorturl.at/elopC",
-    "https://shorturl.at/uvHW1",
-    "https://shorturl.at/chmGZ",
-    "https://shorturl.at/giBQY",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5GKIYIw7QBdo9mP5BWeTZrlnWefRAV1Ejtg&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsTYu0jY4pOwYls-H-L1ThUMr-OY-u7iIIZHDxBN_yVPne5AghkmrWx4d_xsunuKP33es&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrbaX04rb7sq-f3JjdNXT7ErQP3sEghUVkZ8KrFxMtgMjcWdqwcTtUJ7K7Ry5mAkjgZpA&usqp=CAU"
-]
+
 
 
 with app.app_context():
@@ -68,19 +58,6 @@ with app.app_context():
     db.session.commit()
     print("Restaurants successfully populated")
 
-
-    pizzas = []
-    for pizza in pizza_names:
-        num = random.randint(0, len(pizza_images) - 1)
-        new_pizza = Pizza(
-            name = f'{pizza} pizza',
-            ingredients = ', '.join([' '.join(fake.words(2)) for _ in range(4)]),
-            image = pizza_images[num]
-        )
-        pizzas.append(new_pizza)
-    db.session.add_all(pizzas)
-    db.session.commit()
-    print("Pizzas successfully populated")
 
     restaurant_pizzas = []
     for restaurant in Restaurant.query.all():
