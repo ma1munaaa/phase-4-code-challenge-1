@@ -2,7 +2,7 @@
 
 ### Flask Code Challenge - Pizza Restaurants
 
-![La Pizzeria](images/image.png)
+
 This is a project creating a FLASK API for a Pizza Restaurant domain.
 
 Running the Flask server and using Postman to make requests
@@ -12,7 +12,6 @@ Models. You need to create the following relationships:
 - A Pizza has many Restaurants through RestaurantPizza
 - A RestaurantPizza belongs to a Restaurant and belongs to a Pizza
 
-![img.png](images/img.png)
 
 Database API available on: https://flask-pizzeria-api.onrender.com
 
@@ -37,11 +36,6 @@ Add validations to Restaurant Model:
 
 ## VIRTUAL ENVIRONMENT
 
-1. Create virtual environment
-   - `mkdir flask-python-the-pizzeria`
-   - `cd flask-python-the-pizzeria`
-   - `pip install pipenv`
-   - `pipenv install Flask`
 
 ## CREATE $ CONFIGURE FLASK APP
 
